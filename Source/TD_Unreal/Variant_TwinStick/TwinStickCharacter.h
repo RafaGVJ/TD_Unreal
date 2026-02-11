@@ -64,8 +64,8 @@ protected:
 	TEnumAsByte<ETraceTypeQuery> MouseAimTraceChannel;
 
 	/** Impulse to apply to the character when dashing */
-	UPROPERTY(EditAnywhere, Category="Dash", meta = (ClampMin = 0, ClampMax = 10000, Units = "cm/s"))
-	float DashImpulse = 2500.0f;
+	UPROPERTY(EditAnywhere, Category="Dash", meta = (ClampMin = 0, ClampMax = 10, Units = "cm/s"))
+	float DashImpulse = 5.0f;
 
 	/** Type of projectile to spawn when shooting */
 	UPROPERTY(EditAnywhere, Category="Projectile")
