@@ -94,7 +94,7 @@ void ATD_UnrealPlayerController::OnSetDestinationTriggered()
 	if (ControlledPawn != nullptr)
 	{
 		FVector WorldDirection = (CachedDestination - ControlledPawn->GetActorLocation()).GetSafeNormal();
-		ControlledPawn->AddMovementInput(WorldDirection, 1.0, false);
+		ControlledPawn->AddMovementInput(WorldDirection, 3.0, false);
 	}
 }
 

@@ -10,6 +10,8 @@
 #include "GameFramework/SpringArmComponent.h"
 #include "Materials/Material.h"
 #include "Engine/World.h"
+#include "Blueprint/UserWidget.h"
+
 
 ATD_UnrealCharacter::ATD_UnrealCharacter()
 {
@@ -45,13 +47,19 @@ ATD_UnrealCharacter::ATD_UnrealCharacter()
 	// Activate ticking in order to update the cursor every frame.
 	PrimaryActorTick.bCanEverTick = true;
 	PrimaryActorTick.bStartWithTickEnabled = true;
+
+	GetCapsuleComponent()->SetCollisionProfileName(TEXT("Pawn"));
+	GetCapsuleComponent()->SetGenerateOverlapEvents(true);
+	
 }
 
 void ATD_UnrealCharacter::BeginPlay()
 {
 	Super::BeginPlay();
 
-	// stub
+	
+
+
 }
 
 void ATD_UnrealCharacter::Tick(float DeltaSeconds)
@@ -60,3 +68,8 @@ void ATD_UnrealCharacter::Tick(float DeltaSeconds)
 
 	// stub
 }
+
+
+
+
+

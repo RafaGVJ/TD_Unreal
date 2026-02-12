@@ -9,10 +9,17 @@
 /**
  *  A controllable top-down perspective character
  */
+
+class UHealth_SCP;
+
 UCLASS(abstract)
 class ATD_UnrealCharacter : public ACharacter
 {
 	GENERATED_BODY()
+
+
+
+
 
 private:
 
@@ -41,5 +48,10 @@ public:
 	/** Returns the Camera Boom component **/
 	FORCEINLINE class USpringArmComponent* GetCameraBoom() const { return CameraBoom; }
 
+
+	
+
+	
 };
+
 
